@@ -1,69 +1,349 @@
-import Image from "next/image";
+"use client";
+import SubNav from "@/components/Nav/SubNavbar";
+import Navbar from "@/components/Nav/navbar";
+import Link from "next/link";
+import TrendingTicker from "@/components/sliders/TrendingTicker";
+import FooterLinkColumn from "@/components/Nav/Footer";
+import NewsList from "@/components/shared/NewsList";
+import {
+  businessnews,
+  homepageNews,
+  politicsnews,
+} from "@/data/shared/NewsItems";
+import AdSidebar, { secondaryAD } from "@/components/shared/AdSidebar";
+import NewsGrid from "@/components/shared/NewsGris";
+import AdBanner from "@/components/shared/AdBanner";
+import Samachar, { business } from "@/components/shared/samachar/samachargrid";
+import { ChevronRight } from "lucide-react";
+import NewsLinkList from "@/components/shared/NewsItems/corporatenews";
+import NewsTradingList from "@/components/shared/NewsItems/Trading";
+import NavLinkRow from "@/components/shared/NavLinkRow";
+import CardNews from "@/components/cards/newscard";
+
+
+import {
+  mahindraev,
+  mitsubishi,
+  nimbBannerAd,
+  Plaza,
+  Presidentialschool,
+  tataev,
+  texasCollege,
+} from "@/data/shared/adsbanner";
+import { TradingLink } from "@/components/shared/NewsItems/Trading";
+import { categoryLinks, PradeshLinks } from "@/data/shared/NavLink";
+import { pradeshsamacharcard } from "@/data/cards/newscards";
 
 export default function Home() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert h-5 w-[100px]"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the{" "}
-            <code className="rounded bg-black/[.06] px-1.5 py-0.5 font-mono text-[0.9em] dark:bg-white/[.08]">
-              page.tsx
-            </code>{" "}
-            file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert h-[14px] w-4"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={14}
+    <div className="min-h-screen bg-gray-100">
+      <Navbar />
+      <SubNav />
+      <div>
+        <div className="max-w-[1300px] mx-auto">
+          <div>
+            <img
+              src="https://www.onlinekhabar.com/wp-content/uploads/2026/08/WhatsApp-Image-2026-08-12-at-13.38.07-scaled.jpeg"
+              alt=""
+              className="max-w-[1200px] mx-auto mt-10 h-full "
             />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+          </div>
+          <div className="mt-10">
+            <TrendingTicker />
+          </div>
+          <div>
+            <AdBanner ad={Plaza} />
+            <h3 className="text-center text-6xl text-[#28325f] max-w-[1000] pt-10 justify-center mx-auto font-bold tracking-wide leading-relaxed">
+              बागमतीका प्रदेश प्रमुख देवकोटाले एमालेका थापालाई मुख्यमन्त्री
+              नियुक्त गर्दै, शपथ पनि आजै
+            </h3>
+            <div className="mt-10 justify-center mx-auto flex gap-10">
+              <div className="flex gap-2">
+                <img
+                  src="https://www.onlinekhabar.com/wp-content/themes/onlinekhabar-2021/img/ok-icon.png"
+                  width={24}
+                  height={24}
+                  className=""
+                />
+                <p className="text-black "> अनलाइनखबर</p>
+              </div>
+              <div className="flex gap-2">
+                <img
+                  src="https://www.onlinekhabar.com/wp-content/themes/onlinekhabar-2021/img/clock-icon.png"
+                  width={24}
+                  height={24}
+                  className=""
+                />
+                <p className="text-black">८ मिनेट अगाडि</p>
+              </div>
+            </div>
+
+            <div className="border mt-10 w-full border-gray-400"></div>
+            <AdBanner ad={texasCollege} />
+            <h3 className="text-center text-6xl text-[#28325f] max-w-[1000] pt-10 justify-center mx-auto font-bold tracking-wide leading-relaxed hover:text-[#4b5a93]">
+              <a href="">
+                भन्सारमा मालवस्तुको पूर्व-आगमन सूचना आदान प्रदान गर्न चार
+                मुलुकबीच समझदारी
+              </a>
+            </h3>
+            <div className="mt-10 justify-center mx-auto flex gap-10">
+              <div className="flex gap-2">
+                <img
+                  src="https://www.onlinekhabar.com/wp-content/themes/onlinekhabar-2021/img/ok-icon.png"
+                  width={24}
+                  height={24}
+                  className=""
+                />
+                <p className="text-black "> अनलाइनखबर</p>
+              </div>
+              <div className="flex gap-2">
+                <img
+                  src="https://www.onlinekhabar.com/wp-content/themes/onlinekhabar-2021/img/clock-icon.png"
+                  width={24}
+                  height={24}
+                  className=""
+                />
+                <p className="text-black">८ मिनेट अगाडि</p>
+              </div>
+            </div>
+
+            <img
+              src="https://www.onlinekhabar.com/wp-content/uploads/2026/08/bhansar_sign.jpg"
+              alt="Image loading"
+              className="mt-10 mx-auto "
+            />
+            <p className="text-gray-700 text-center pt-10 text-lg px-10 ">
+              समझदारी पत्रमा नेपाल, भुटान, बंगलादेश र माल्दिभ्सका भन्सार
+              प्रशासनबीच हस्ताक्षर भएको हो । माल्दिभ्समा आयोजित एसएएसईसीको १४ औं
+              सबग्रुप मिटिङका अवसरमा समझदारी पत्रमा चार देशका भन्सार
+              प्रशासकहरूले हस्ताक्षर गरेका छन् ।
+            </p>
+            <div>
+              <AdBanner ad={Presidentialschool} />
+            </div>
+            <h3 className="text-center text-6xl text-[#28325f] max-w-[1000] pt-10 justify-center mx-auto font-bold tracking-wide leading-relaxed">
+              भ्रष्टाचार बढ्नुमा सरकार, अदालत र महालेखा कार्यालय जिम्मेवार छन् :
+              युवराज दुलाल
+            </h3>
+            <div className="mt-10 justify-center mx-auto flex gap-10">
+              <div className="flex gap-2">
+                <img
+                  src="https://www.onlinekhabar.com/wp-content/themes/onlinekhabar-2021/img/ok-icon.png"
+                  width={24}
+                  height={24}
+                  className=""
+                />
+                <p className="text-black "> अनलाइनखबर</p>
+              </div>
+              <div className="flex gap-2">
+                <img
+                  src="https://www.onlinekhabar.com/wp-content/themes/onlinekhabar-2021/img/clock-icon.png"
+                  width={24}
+                  height={24}
+                  className=""
+                />
+                <p className="text-black">८ मिनेट अगाडि</p>
+              </div>
+            </div>
+            <div className="border mt-10 w-full border-gray-400"></div>
+            <h3 className="text-center text-6xl text-[#28325f] max-w-[1000] pt-10 justify-center mx-auto font-bold tracking-wide leading-relaxed">
+              लेखा समितिमा खगेन्द्र सुनारको आरोप : प्रहरी हेडक्वार्टर बिचौलियाले
+              कब्जा गरे
+            </h3>
+            <div className="mt-10 justify-center mx-auto flex gap-10">
+              <div className="flex gap-2">
+                <img
+                  src="https://www.onlinekhabar.com/wp-content/themes/onlinekhabar-2021/img/ok-icon.png"
+                  width={24}
+                  height={24}
+                  className=""
+                />
+                <p className="text-black "> अनलाइनखबर</p>
+              </div>
+              <div className="flex gap-2">
+                <img
+                  src="https://www.onlinekhabar.com/wp-content/themes/onlinekhabar-2021/img/clock-icon.png"
+                  width={24}
+                  height={24}
+                  className=""
+                />
+                <p className="text-black">८ मिनेट अगाडि</p>
+              </div>
+            </div>
+            <div className="border mt-10 w-full border-gray-400"></div>
+            <h3 className="text-center text-6xl text-[#28325f] max-w-[1000] pt-10 justify-center mx-auto font-bold tracking-wide leading-relaxed">
+              उच्चपदस्थ नेपालीको विदेशी बैंकको रकम खोज्न विशेष टास्क फोर्स बनाउन
+              प्रस्ताव
+            </h3>
+            <div className="mt-10 justify-center mx-auto flex gap-10">
+              <div className="flex gap-2">
+                <img
+                  src="https://www.onlinekhabar.com/wp-content/themes/onlinekhabar-2021/img/ok-icon.png"
+                  width={24}
+                  height={24}
+                  className=""
+                />
+                <p className="text-black "> अनलाइनखबर</p>
+              </div>
+              <div className="flex gap-2">
+                <img
+                  src="https://www.onlinekhabar.com/wp-content/themes/onlinekhabar-2021/img/clock-icon.png"
+                  width={24}
+                  height={24}
+                  className=""
+                />
+                <p className="text-black">८ मिनेट अगाडि</p>
+              </div>
+            </div>
+            <div className="border mt-10 w-full border-gray-400"></div>
+            <h3 className="text-center text-6xl text-[#28325f] max-w-[1000] pt-10 justify-center mx-auto font-bold tracking-wide leading-relaxed">
+              अमरेश सिंहको प्रश्न : अख्तियार प्रधानमन्त्री कार्यालयको शाखा हो ?
+            </h3>
+            <div className="mt-10 justify-center mx-auto flex gap-10">
+              <div className="flex gap-2">
+                <img
+                  src="https://www.onlinekhabar.com/wp-content/themes/onlinekhabar-2021/img/ok-icon.png"
+                  width={24}
+                  height={24}
+                  className=""
+                />
+                <p className="text-black "> अनलाइनखबर</p>
+              </div>
+              <div className="flex gap-2">
+                <img
+                  src="https://www.onlinekhabar.com/wp-content/themes/onlinekhabar-2021/img/clock-icon.png"
+                  width={24}
+                  height={24}
+                  className=""
+                />
+                <p className="text-black">८ मिनेट अगाडि</p>
+              </div>
+            </div>
+            <AdBanner ad={tataev} />
+
+            <section className="flex gap-4 mt-20">
+              <div className="relative max-w-lg overflow-hidden ">
+                <img
+                  src="https://www.onlinekhabar.com/wp-content/uploads/2026/08/shobita-gautam-1024x500.jpg"
+                  className="w-full h-[680px] object-cover hover:scale-110 transition-transform duration-500"
+                />
+
+                <a
+                  href=""
+                  className="absolute bottom-30 left-0 w-full px-7  py-4 text-3xl font-bold text-white bg-black/50"
+                >
+                  कर्मचारीमाथि अख्तियारको डर देखियो : कानुनमन्त्री
+                </a>
+              </div>
+              <div>
+                <NewsList items={homepageNews} />
+              </div>
+              <div>
+                <AdSidebar />
+              </div>
+            </section>
+            <AdBanner ad={mahindraev} />
+            <img
+              src="https://www.onlinekhabar.com/wp-content/uploads/2026/07/WhatsApp-GIF-2026-07-30-at-13.38.43.gif"
+              className="mt-10"
+            />
+            <div className="border mt-10 w-full border-gray-400"></div>
+            <section>
+              <div className="flex max-w-full mt-10">
+                <h3 className="text-blue-700  text-3xl font-bold ">Samachar</h3>
+                <Link href="" className="absolute right-120">
+                  <ChevronRight
+                    width={24}
+                    height={26}
+                    className="rounded-full bg-gray-200 text-black mx-auto hover:bg-gray-300 "
+                  />
+                </Link>
+              </div>
+              <div className="flex gap-10 ">
+                <div>
+                  <div className="mt-10">
+                    <Samachar />
+                  </div>
+                  <div className="mt-10">
+                    <NewsGrid
+                      items={politicsnews}
+                      bannerAfter={6}
+                      bannerAd={nimbBannerAd}
+                    />
+                  </div>
+                </div>
+                <div className="-mt-10">
+                  <AdSidebar ads={secondaryAD} />
+                </div>
+              </div>
+            </section>
+            <div className="border mt-10 w-full border-gray-300"></div>
+            <section className="mt-20">
+              <div className="flex max-w-full">
+                <h3 className="text-blue-700  text-3xl font-bold ">बिजनेस</h3>
+                <NavLinkRow links={categoryLinks} />
+                <Link href="" className="absolute right-120">
+                  <ChevronRight
+                    width={24}
+                    height={26}
+                    className="rounded-full bg-gray-200 text-black mx-auto hover:bg-gray-300 "
+                  />
+                </Link>
+              </div>
+              <div className="flex gap-10 ">
+                <div>
+                  <div className="mt-2">
+                    <Samachar sam={business} bgColor="bg-blue-500" />
+                  </div>
+                  <div className="mt-10">
+                    <NewsGrid items={businessnews} />
+                  </div>
+                </div>
+                <div className="-mt-10">
+                  <NewsLinkList />
+                </div>
+              </div>
+            </section>
+            <div className="border mt-10 w-full border-gray-300"></div>
+            <section className="mt-20">
+              <div className="flex max-w-full">
+                <h3 className="text-blue-700  text-3xl font-bold ">
+                  प्रदेश समाचार
+                </h3>
+                //{" "}
+                <NavLinkRow
+                  links={PradeshLinks}
+                  linkClassName="text-lg bg-gray-300 rounded-full px-3 py-2 text-blue-700 hover:text-white font-bold text-center "
+                  containerClassName="px-10 space-x-6"
+                />
+                <Link href="" className="absolute right-160">
+                  <ChevronRight
+                    width={24}
+                    height={26}
+                    className="rounded-full bg-gray-200 text-black mx-auto hover:bg-gray-300 "
+                  />
+                </Link>
+              </div>
+              <div className="flex gap-10 ">
+                <div>
+                  <div className="mt-2">
+                    <Samachar sam={business} />
+                  </div>
+                  <div>
+                    <CardNews cards={pradeshsamacharcard} />
+                  </div>
+                </div>
+                <div className="-mt-10">
+                  <NewsTradingList />
+                </div>
+              </div>
+            </section>
+            <div className="border mt-10 w-full border-gray-400"></div>
+            <AdBanner ad={mitsubishi}/>
+          </div>
         </div>
-      </main>
+      </div>
+      <FooterLinkColumn />
     </div>
   );
 }
