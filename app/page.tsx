@@ -5,6 +5,7 @@ import Link from "next/link";
 import TrendingTicker from "@/components/sliders/TrendingTicker";
 import FooterLinkColumn from "@/components/Nav/Footer";
 import NewsList from "@/components/shared/NewsList";
+import CardSlider from "@/components/sliders/cardslider";
 import {
   businessnews,
   homepageNews,
@@ -32,7 +33,7 @@ import {
 } from "@/data/shared/adsbanner";
 import { TradingLink } from "@/components/shared/NewsItems/Trading";
 import { categoryLinks, PradeshLinks } from "@/data/shared/NavLink";
-import { pradeshsamacharcard } from "@/data/cards/newscards";
+import { pradeshsamacharcard, slidernews } from "@/data/cards/newscards";
 
 export default function Home() {
   return (
@@ -340,6 +341,11 @@ export default function Home() {
             </section>
             <div className="border mt-10 w-full border-gray-400"></div>
             <AdBanner ad={mitsubishi}/>
+            <section className="relative left-1/2 mt-10 w-screen -translate-x-1/2">
+              <div>
+                <CardSlider cards={slidernews}/>
+              </div>
+            </section>
           </div>
         </div>
       </div>

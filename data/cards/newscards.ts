@@ -226,4 +226,42 @@ export const mainNews: NewsCards[] = [
     href: "",
   },
 ];
-
+export const slidernews: NewsCards[] = [
+      {
+    id: "sl1",
+    image: "https://www.onlinekhabar.com/wp-content/uploads/2026/08/Dhawal-shamshare-rana.jpg",
+    heading: "जय नेपाल पार्टीले राजसंस्था र हिन्दु अधिराज्यका पक्षमा हस्ताक्षर अभियान सञ्चालन गर्ने",
+    href: "",
+  },
+  {
+    id: "sl2",
+    image: "https://www.onlinekhabar.com/wp-content/uploads/2022/01/arest-police.png",
+    heading: "सामाजिक सञ्जालमार्फत चरित्र हत्या गर्ने पक्राउ",
+    href: "",
+  },
+  {
+    id: "sl3",
+    image: "https://www.onlinekhabar.com/wp-content/uploads/2026/08/RPP-Bagmati-1.jpg",
+    heading: "बागमतीमा राप्रपाबाट ३ मन्त्री, ४ बजे शपथको तयारी",
+    href: "",
+  },
+  {
+    id: "sl4",
+    image: "https://www.onlinekhabar.com/wp-content/uploads/2026/08/Sarbajanik-Choutara-Khotang.jpg",
+    heading: "दिक्तेलको २०० वर्ष पुरानो चौतारा अतिक्रमण : ५ वर्षपछि प्रधानमन्त्री कार्यालयमा उजुरी",
+    href: "",
+  },
+  {
+    id: "sl5",
+    image: "https://www.onlinekhabar.com/wp-content/uploads/2026/08/lakhe.jpg",
+    heading: "म्याङ्लुङमा लाखेजात्राको रौनकता, गुन्जिदै परम्परागत बाजागाजाको धुन",
+    href: "",
+  },
+  {
+    id: "sl6",
+    image: "https://www.onlinekhabar.com/wp-content/uploads/2026/08/saptari-2.jpg",
+    heading: "सप्तरीमा २५१ जनाको आँखा जाँच, ९५ जनामा मोतियाबिन्दु",
+    href: "",
+  },
+    
+]
