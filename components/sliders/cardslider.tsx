@@ -11,8 +11,8 @@ interface CardSliderProps {
   title?: string;
 }
 
-export default function CardSlider({ cards, title = "फिचर" }: CardSliderProps) {
-  const [emblaRef, emblaApi] = useEmblaCarousel({ align: "start", dragFree: true, loop:true });
+export default function CardSlider({ cards, title }: CardSliderProps) {
+  const [emblaRef, emblaApi] = useEmblaCarousel({ align: "start", dragFree: true });
 
   const scrollPrev = useCallback(() => emblaApi?.scrollPrev(), [emblaApi]);
   const scrollNext = useCallback(() => emblaApi?.scrollNext(), [emblaApi]);

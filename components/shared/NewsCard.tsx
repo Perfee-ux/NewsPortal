@@ -2,10 +2,20 @@ import Image from "next/image";
 import Link from "next/link";
 import { NewsItem } from "@/data/types";
 
-export default function NewsCard({ item }: { item: NewsItem }) {
+export default function NewsCard({
+  item,
+  size = "default",
+}: {
+  item: NewsItem;
+  size?: "default" | "small";
+}) {
   return (
     <Link href={item.href} className="flex gap-8 hover:opacity-80">
-      <div className="relative h-28 w-34 shrink-0 overflow-hidden rounded">
+      <div
+        className={`relative shrink-0 overflow-hidden rounded ${
+          size === "small" ? "h-20 w-24" : "h-28 w-34"
+        }`}
+      >
         <Image
           src={item.image}
           alt={item.title}

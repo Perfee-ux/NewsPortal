@@ -3,7 +3,7 @@ import { NavItem } from "../types";
 export const navItems: NavItem[] = [
   { label: "होमपेज", href: "/" },
   { label: "समाचार", href: "/pages/samachar" },
-  { label: "बिजनेस", href: "/business" },
+  { label: "बिजनेस", href: "/pages/business" },
   {
     label: "जीवनशैली",
     href: "/lifestyle",

@@ -1,8 +1,11 @@
+import { title } from "process";
+
 export interface NewsCards {
   id: string;
   image: string;
   heading: string;
   href: string;
+  title?:string;
 }
 
 export const pradeshsamacharcard: NewsCards[] = [
@@ -264,4 +267,159 @@ export const slidernews: NewsCards[] = [
     href: "",
   },
     
-]
+];
+
+export const CoverStory: NewsCards[] = [
+      {
+    id: "sla",
+    image: "https://www.onlinekhabar.com/wp-content/uploads/2026/07/sunsari-goli-prakaran1248-1024x500.jpg",
+    heading: "सुनसरी घटना : कति भयो भौतिक क्षति ?",
+    href: "",
+    title: "कभर स्टोरी"
+  },
+  {
+    id: "slb",
+    image: "https://www.onlinekhabar.com/wp-content/uploads/2026/07/sudhan-byanner-1024x500.jpg",
+    heading: "फौजदारी धरपकडमा आक्रामक : नियमसंगत कि नियतवश ?",
+    href: "",
+    title: "कभर स्टोरी"
+  },
+  {
+    id: "slc",
+    image: "https://www.onlinekhabar.com/wp-content/uploads/2025/04/Victims-of-conflict-sexual-violence-2-1024x500.png",
+    heading: "जो शान्ति सम्झौताको २० वर्षपछि पनि युद्धमै छन्",
+    href: "",
+    title:"कभर स्टोरी"
+  },    
+];
+
+export const saptastory: NewsCards[] = [
+      {
+    id: "slaa",
+    image: "https://www.onlinekhabar.com/wp-content/uploads/2026/07/sunsari-goli-prakaran1248-1024x500.jpg",
+    heading: "सुनसरी घटना : कति भयो भौतिक क्षति ?",
+    href: "",
+    title: "कभर स्टोरी"
+  },
+  {
+    id: "slba",
+    image: "https://www.onlinekhabar.com/wp-content/uploads/2026/07/sudhan-byanner-1024x500.jpg",
+    heading: "फौजदारी धरपकडमा आक्रामक : नियमसंगत कि नियतवश ?",
+    href: "",
+    title: "कभर स्टोरी"
+  },
+  {
+    id: "slca",
+    image: "https://www.onlinekhabar.com/wp-content/uploads/2025/04/Victims-of-conflict-sexual-violence-2-1024x500.png",
+    heading: "जो शान्ति सम्झौताको २० वर्षपछि पनि युद्धमै छन्",
+    href: "",
+    title:"कभर स्टोरी"
+  },    
+    {
+    id: "slea",
+    image: "https://www.onlinekhabar.com/wp-content/uploads/2025/04/Victims-of-conflict-sexual-violence-2-1024x500.png",
+    heading: "जो शान्ति सम्झौताको २० वर्षपछि पनि युद्धमै छन्",
+    href: "",
+    title:"कभर स्टोरी"
+  },    
+];
+
+export const SahityaCards: NewsCards[] =[
+  
+      {
+    id: "slaa",
+    image: "https://www.onlinekhabar.com/wp-content/uploads/2026/08/image-7-3-768x375.png",
+    heading: "पारिजात तिमीलाई सम्झिरहेछु",
+    href: "",
+    title: "कभर स्टोरी"
+  },
+  {
+    id: "slba",
+    image: "https://www.onlinekhabar.com/wp-content/uploads/2026/08/image-14-1-768x375.png",
+    heading: "श्रवण मुकारूङको चुलो",
+    href: "",
+    title: "कभर स्टोरी"
+  },
+  {
+    id: "slca",
+    image: "https://www.onlinekhabar.com/wp-content/uploads/2026/08/war-768x444.png",
+    heading: "तर हार मान्दैन",
+    href: "",
+    title:"कभर स्टोरी"
+  },    
+    {
+    id: "slea",
+    image: "https://www.onlinekhabar.com/wp-content/uploads/2026/08/Nepalaya_25-writers-book-768x478.jpg",
+    heading: "नेपालयले सार्वजनिक गर्‍यो २५ वर्षमुनिका ७५ लेखकका कृति",
+    href: "",
+    title:"कभर स्टोरी"
+  },  
+        {
+    id: "slaaa",
+    image: "https://www.onlinekhabar.com/wp-content/uploads/2026/08/image-7-3-768x375.png",
+    heading: "पारिजात तिमीलाई सम्झिरहेछु",
+    href: "",
+    title: "कभर स्टोरी"
+  },
+  {
+    id: "slbaa",
+    image: "https://www.onlinekhabar.com/wp-content/uploads/2026/08/image-14-1-768x375.png",
+    heading: "श्रवण मुकारूङको चुलो",
+    href: "",
+    title: "कभर स्टोरी"
+  },
+  {
+    id: "slcaa",
+    image: "https://www.onlinekhabar.com/wp-content/uploads/2026/08/war-768x444.png",
+    heading: "तर हार मान्दैन",
+    href: "",
+    title:"कभर स्टोरी"
+  },    
+    {
+    id: "sleaa",
+    image: "https://www.onlinekhabar.com/wp-content/uploads/2026/08/Nepalaya_25-writers-book-768x478.jpg",
+    heading: "नेपालयले सार्वजनिक गर्‍यो २५ वर्षमुनिका ७५ लेखकका कृति",
+    href: "",
+    title:"कभर स्टोरी"
+  },  
+];
+
+export const sliderstory: NewsCards[] = [
+      {
+    id: "sl1",
+    image: "https://www.onlinekhabar.com/wp-content/uploads/2026/04/balen-visual-story-gif.gif",
+    heading: "जय नेपाल पार्टीले राजसंस्था र हिन्दु अधिराज्यका पक्षमा हस्ताक्षर अभियान सञ्चालन गर्ने",
+    href: "",
+  },
+  {
+    id: "sl2",
+    image: "https://www.onlinekhabar.com/wp-content/uploads/2026/03/post-election-082-story-gif.gif",
+    heading: "सामाजिक सञ्जालमार्फत चरित्र हत्या गर्ने पक्राउ",
+    href: "",
+  },
+  {
+    id: "sl3",
+    image: "https://www.onlinekhabar.com/wp-content/uploads/2026/03/last-3-elections-in-data-gif1111.gif",
+    heading: "बागमतीमा राप्रपाबाट ३ मन्त्री, ४ बजे शपथको तयारी",
+    href: "",
+  },
+  {
+    id: "sl4",
+    image: "https://www.onlinekhabar.com/wp-content/uploads/2026/02/45-genz-martyrs-story-hero-gif.gif",
+    heading: "दिक्तेलको २०० वर्ष पुरानो चौतारा अतिक्रमण : ५ वर्षपछि प्रधानमन्त्री कार्यालयमा उजुरी",
+    href: "",
+  },
+  {
+    id: "sl5",
+    image: "https://www.onlinekhabar.com/wp-content/uploads/2026/02/45-genz-martyrs-story-hero-gif.gif",
+    heading: "म्याङ्लुङमा लाखेजात्राको रौनकता, गुन्जिदै परम्परागत बाजागाजाको धुन",
+    href: "",
+  },
+  {
+    id: "sl6",
+    image: "https://www.onlinekhabar.com/wp-content/uploads/2026/02/45-genz-martyrs-story-hero-gif.gif",
+    heading: "सप्तरीमा २५१ जनाको आँखा जाँच, ९५ जनामा मोतियाबिन्दु",
+    href: "",
+  },
+    
+];

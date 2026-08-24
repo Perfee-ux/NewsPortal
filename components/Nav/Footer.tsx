@@ -71,7 +71,7 @@ export default function FooterLinkColumn() {
       <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-6">
         {footerColumns.map((column) => (
           <div key={column.title}>
-            <h3 className="mb-5 text-lg font-bold text-blue-600">
+            <h3 className="mb-5 text-lg font-bold text-[#2260BF]">
               {column.title}
             </h3>
 
@@ -80,7 +80,7 @@ export default function FooterLinkColumn() {
                 <li key={link.href}>
                   <Link
                     href={link.href}
-                    className="text-sm text-gray-700 transition-colors hover:text-blue-600"
+                    className="text-sm text-gray-700 transition-colors hover:text-[#2260BF]"
                   >
                     {link.label}
                   </Link>

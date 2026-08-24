@@ -46,14 +46,14 @@ interface AdProp {
 
 export default function AdSidebar({ ads = sidead }: AdProp) {
   return (
-    <div className="flex w-[300px] shrink-0 flex-col gap-4 sticky top-20">
+    <div className="flex w-[300px] shrink-0 flex-col gap-4 sticky top-20 ">
       {ads.map((ad) => (
         <Link
           key={ad.id}
           href={ad.href}
           target="_blank"
           rel="noopener noreferrer sponsored"
-          className="relative block aspect-4/3 w-full overflow-hidden rounded-md hover:opacity-90"
+          className="relative block aspect-2/1  w-full  rounded-md hover:opacity-90 "
         >
           <Image src={ad.image} alt={ad.alt} fill className="object-cover" />
         </Link>

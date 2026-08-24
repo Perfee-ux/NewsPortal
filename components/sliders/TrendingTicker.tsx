@@ -22,7 +22,6 @@ const stocks: Stock[] = [
 export default function TrendingTicker() {
   return (
     <div className="flex items-stretch border-y border-gray-200 bg-white">
-      {/* Label */}
       <div className="flex shrink-0 items-center bg-[#0F3D2E] px-6">
         <span className="text-sm font-semibold text-white">Trending Stocks</span>
       </div>
@@ -54,7 +53,6 @@ export default function TrendingTicker() {
         </div>
       </div>
 
-      {/* CTA */}
       <div className="flex shrink-0 items-center gap-2 bg-[#D9A441]/20 px-6">
         <div>
           <p className="text-sm font-semibold text-gray-900">View Stock Live</p>

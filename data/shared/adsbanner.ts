@@ -52,3 +52,18 @@ export const mitsubishi: BannerAd = {
     href:"https://bit.ly/3xltPV0",
     alt: "NIMB Paywear - stick, tap & pay"
 };
+
+export const shivamcement: BannerAd = {
+    id: "cement",
+    image:"https://www.onlinekhabar.com/wp-content/uploads/2026/04/1230x100-1.gif",
+    href:"https://www.youtube.com/watch?v=XHh_7HP9NSk&feature=youtu.be",
+    alt: "Shivam Cement"
+}
+
+export const worldlink: BannerAd = {
+    id: "worldlink",
+    image: "https://www.onlinekhabar.com/wp-content/uploads/2025/11/1230-x-100.gif",
+    href: "https://worldlink.com.np/worldlink-6g/",
+    alt: "Chito bhanekai WorldLink"
+
+}

@@ -2,25 +2,30 @@
 import SubNav from "@/components/Nav/SubNavbar";
 import Navbar from "@/components/Nav/navbar";
 import Link from "next/link";
-import TrendingTicker from "@/components/sliders/TrendingTicker";
+// import TrendingTicker from "@/components/sliders/TrendingTicker";
+
 import FooterLinkColumn from "@/components/Nav/Footer";
 import NewsList from "@/components/shared/NewsList";
 import CardSlider from "@/components/sliders/cardslider";
 import {
+  antarastryaNews,
   businessnews,
   homepageNews,
   politicsnews,
+  swasthaNews,
 } from "@/data/shared/NewsItems";
 import AdSidebar, { secondaryAD } from "@/components/shared/AdSidebar";
 import NewsGrid from "@/components/shared/NewsGris";
 import AdBanner from "@/components/shared/AdBanner";
-import Samachar, { business } from "@/components/shared/samachar/samachargrid";
+import Samachar from "@/components/shared/samachar/samachargrid";
 import { ChevronRight } from "lucide-react";
 import NewsLinkList from "@/components/shared/NewsItems/corporatenews";
 import NewsTradingList from "@/components/shared/NewsItems/Trading";
-import NavLinkRow from "@/components/shared/NavLinkRow";
+import NavLinkRow from "@/components/Nav/NavLinkRow";
 import CardNews from "@/components/cards/newscard";
-
+import HoverCardSlider from "@/components/sliders/hovercardslider";
+import HoveredCard, { HoverCardItem } from "@/components/cards/hovercard";
+import ImgNavRow from "@/components/Nav/ImageNavRow";
 
 import {
   mahindraev,
@@ -28,12 +33,38 @@ import {
   nimbBannerAd,
   Plaza,
   Presidentialschool,
+  shivamcement,
   tataev,
   texasCollege,
+  worldlink,
 } from "@/data/shared/adsbanner";
-import { TradingLink } from "@/components/shared/NewsItems/Trading";
-import { categoryLinks, PradeshLinks } from "@/data/shared/NavLink";
-import { pradeshsamacharcard, slidernews } from "@/data/cards/newscards";
+import { TradingLink } from "@/data/shared/Tradinglist";
+import {
+  categoryLinks,
+  PradeshLinks,
+  swasthaLinks,
+} from "@/data/shared/NavLink";
+import {
+  CoverStory,
+  pradeshsamacharcard,
+  SahityaCards,
+  saptastory,
+  slidernews,
+  sliderstory,
+} from "@/data/cards/newscards";
+import { antarastiya, business, sapta, swastha } from "@/data/cards/samachar";
+import {
+  bichitraSansar,
+  khelkud,
+  LandingTop,
+  suchanaPravidhi,
+  unmissed,
+} from "@/data/cards/hovercard";
+import { TradingDoctor } from "@/data/nav/imageNav";
+import RankedNewsList from "@/components/shared/NewsItems/RankedNewsList";
+import { mostCommentedNews } from "@/data/shared/rankedNews";
+import HoverCardGrid from "@/components/shared/hovergrid";
+import { NewsLink } from "@/data/shared/NewsLinkItem";
 
 export default function Home() {
   return (
@@ -49,12 +80,12 @@ export default function Home() {
               className="max-w-[1200px] mx-auto mt-10 h-full "
             />
           </div>
-          <div className="mt-10">
+          {/* <div className="mt-10">
             <TrendingTicker />
-          </div>
+          </div> */}
           <div>
             <AdBanner ad={Plaza} />
-            <h3 className="text-center text-6xl text-[#28325f] max-w-[1000] pt-10 justify-center mx-auto font-bold tracking-wide leading-relaxed">
+            <h3 className="text-center text-6xl text-[#102C57] max-w-[1000] pt-10 justify-center mx-auto font-bold tracking-wide leading-relaxed hover:text-[#2260BF] transition-colors">
               बागमतीका प्रदेश प्रमुख देवकोटाले एमालेका थापालाई मुख्यमन्त्री
               नियुक्त गर्दै, शपथ पनि आजै
             </h3>
@@ -75,13 +106,20 @@ export default function Home() {
                   height={24}
                   className=""
                 />
-                <p className="text-black">८ मिनेट अगाडि</p>
+                <p className="text-black">
+                  {new Date().toLocaleDateString("ne-NP", {
+                    timeZone: "Asia/Kathmandu",
+                    day: "numeric",
+                    month: "long",
+                    year: "numeric",
+                  })}
+                </p>
               </div>
             </div>
 
             <div className="border mt-10 w-full border-gray-400"></div>
             <AdBanner ad={texasCollege} />
-            <h3 className="text-center text-6xl text-[#28325f] max-w-[1000] pt-10 justify-center mx-auto font-bold tracking-wide leading-relaxed hover:text-[#4b5a93]">
+            <h3 className="text-center text-6xl text-[#102C57] max-w-[1000] pt-10 justify-center mx-auto font-bold tracking-wide leading-relaxed hover:text-[#2260BF] transition-colors">
               <a href="">
                 भन्सारमा मालवस्तुको पूर्व-आगमन सूचना आदान प्रदान गर्न चार
                 मुलुकबीच समझदारी
@@ -104,7 +142,14 @@ export default function Home() {
                   height={24}
                   className=""
                 />
-                <p className="text-black">८ मिनेट अगाडि</p>
+               <p className="text-black">
+                  {new Date().toLocaleDateString("ne-NP", {
+                    timeZone: "Asia/Kathmandu",
+                    day: "numeric",
+                    month: "long",
+                    year: "numeric",
+                  })}
+                </p>
               </div>
             </div>
 
@@ -122,7 +167,7 @@ export default function Home() {
             <div>
               <AdBanner ad={Presidentialschool} />
             </div>
-            <h3 className="text-center text-6xl text-[#28325f] max-w-[1000] pt-10 justify-center mx-auto font-bold tracking-wide leading-relaxed">
+            <h3 className="text-center text-6xl text-[#102C57] max-w-[1000] pt-10 justify-center mx-auto font-bold tracking-wide leading-relaxed hover:text-[#2260BF] transition-colors">
               भ्रष्टाचार बढ्नुमा सरकार, अदालत र महालेखा कार्यालय जिम्मेवार छन् :
               युवराज दुलाल
             </h3>
@@ -143,11 +188,18 @@ export default function Home() {
                   height={24}
                   className=""
                 />
-                <p className="text-black">८ मिनेट अगाडि</p>
+                <p className="text-black">
+                  {new Date().toLocaleDateString("ne-NP", {
+                    timeZone: "Asia/Kathmandu",
+                    day: "numeric",
+                    month: "long",
+                    year: "numeric",
+                  })}
+                </p>
               </div>
             </div>
             <div className="border mt-10 w-full border-gray-400"></div>
-            <h3 className="text-center text-6xl text-[#28325f] max-w-[1000] pt-10 justify-center mx-auto font-bold tracking-wide leading-relaxed">
+            <h3 className="text-center text-6xl text-[#102C57] max-w-[1000] pt-10 justify-center mx-auto font-bold tracking-wide leading-relaxed hover:text-[#2260BF] transition-colors">
               लेखा समितिमा खगेन्द्र सुनारको आरोप : प्रहरी हेडक्वार्टर बिचौलियाले
               कब्जा गरे
             </h3>
@@ -168,36 +220,19 @@ export default function Home() {
                   height={24}
                   className=""
                 />
-                <p className="text-black">८ मिनेट अगाडि</p>
+                <p className="text-black">
+                  {new Date().toLocaleDateString("ne-NP", {
+                    timeZone: "Asia/Kathmandu",
+                    day: "numeric",
+                    month: "long",
+                    year: "numeric",
+                  })}
+                </p>
               </div>
             </div>
             <div className="border mt-10 w-full border-gray-400"></div>
-            <h3 className="text-center text-6xl text-[#28325f] max-w-[1000] pt-10 justify-center mx-auto font-bold tracking-wide leading-relaxed">
-              उच्चपदस्थ नेपालीको विदेशी बैंकको रकम खोज्न विशेष टास्क फोर्स बनाउन
-              प्रस्ताव
-            </h3>
-            <div className="mt-10 justify-center mx-auto flex gap-10">
-              <div className="flex gap-2">
-                <img
-                  src="https://www.onlinekhabar.com/wp-content/themes/onlinekhabar-2021/img/ok-icon.png"
-                  width={24}
-                  height={24}
-                  className=""
-                />
-                <p className="text-black "> अनलाइनखबर</p>
-              </div>
-              <div className="flex gap-2">
-                <img
-                  src="https://www.onlinekhabar.com/wp-content/themes/onlinekhabar-2021/img/clock-icon.png"
-                  width={24}
-                  height={24}
-                  className=""
-                />
-                <p className="text-black">८ मिनेट अगाडि</p>
-              </div>
-            </div>
-            <div className="border mt-10 w-full border-gray-400"></div>
-            <h3 className="text-center text-6xl text-[#28325f] max-w-[1000] pt-10 justify-center mx-auto font-bold tracking-wide leading-relaxed">
+
+            <h3 className="text-center text-6xl text-[#102C57] max-w-[1000] pt-10 justify-center mx-auto font-bold tracking-wide leading-relaxed hover:text-[#2260BF] transition-colors ">
               अमरेश सिंहको प्रश्न : अख्तियार प्रधानमन्त्री कार्यालयको शाखा हो ?
             </h3>
             <div className="mt-10 justify-center mx-auto flex gap-10">
@@ -217,24 +252,32 @@ export default function Home() {
                   height={24}
                   className=""
                 />
-                <p className="text-black">८ मिनेट अगाडि</p>
+                <p className="text-black">
+                  {new Date().toLocaleDateString("ne-NP", {
+                    timeZone: "Asia/Kathmandu",
+                    day: "numeric",
+                    month: "long",
+                    year: "numeric",
+                  })}
+                </p>
               </div>
             </div>
             <AdBanner ad={tataev} />
 
             <section className="flex gap-4 mt-20">
-              <div className="relative max-w-lg overflow-hidden ">
-                <img
+              <div className="relative w-full max-w-lg shrink-0 overflow-hidden">
+                <HoveredCard cards={LandingTop} size="large" />
+                {/* <img
                   src="https://www.onlinekhabar.com/wp-content/uploads/2026/08/shobita-gautam-1024x500.jpg"
                   className="w-full h-[680px] object-cover hover:scale-110 transition-transform duration-500"
                 />
 
                 <a
                   href=""
-                  className="absolute bottom-30 left-0 w-full px-7  py-4 text-3xl font-bold text-white bg-black/50"
+                  className="absolute bottom-30 left-0 w-full px-7  py-4 text-[45px] font-bold text-white bg-black/50"
                 >
                   कर्मचारीमाथि अख्तियारको डर देखियो : कानुनमन्त्री
-                </a>
+                </a> */}
               </div>
               <div>
                 <NewsList items={homepageNews} />
@@ -251,13 +294,11 @@ export default function Home() {
             <div className="border mt-10 w-full border-gray-400"></div>
             <section>
               <div className="flex max-w-full mt-10">
-                <h3 className="text-blue-700  text-3xl font-bold ">Samachar</h3>
-                <Link href="" className="absolute right-120">
-                  <ChevronRight
-                    width={24}
-                    height={26}
-                    className="rounded-full bg-gray-200 text-black mx-auto hover:bg-gray-300 "
-                  />
+                <h3 className="text-[#2260BF]  text-[45px] font-bold ">समाचार</h3>
+                <Link href="" className="absolute right-120 rounded-full bg-gray-200 text-gray-700 mx-auto hover:bg-gray-300 px-2 py-2 text-sm">
+                  सबै हेर्नुहोस्
+                    
+                  
                 </Link>
               </div>
               <div className="flex gap-10 ">
@@ -281,14 +322,12 @@ export default function Home() {
             <div className="border mt-10 w-full border-gray-300"></div>
             <section className="mt-20">
               <div className="flex max-w-full">
-                <h3 className="text-blue-700  text-3xl font-bold ">बिजनेस</h3>
+                <h3 className="text-blue-700  text-[45px] font-bold ">बिजनेस</h3>
                 <NavLinkRow links={categoryLinks} />
-                <Link href="" className="absolute right-120">
-                  <ChevronRight
-                    width={24}
-                    height={26}
-                    className="rounded-full bg-gray-200 text-black mx-auto hover:bg-gray-300 "
-                  />
+                <Link href="" className="absolute right-120 rounded-full bg-gray-200 text-gray-700 mx-auto hover:bg-gray-300 px-2 py-2 text-sm">
+                  सबै हेर्नुहोस्
+                  
+                  
                 </Link>
               </div>
               <div className="flex gap-10 ">
@@ -301,28 +340,25 @@ export default function Home() {
                   </div>
                 </div>
                 <div className="-mt-10">
-                  <NewsLinkList />
+                  <NewsLinkList items={NewsLink} />
                 </div>
               </div>
             </section>
             <div className="border mt-10 w-full border-gray-300"></div>
             <section className="mt-20">
               <div className="flex max-w-full">
-                <h3 className="text-blue-700  text-3xl font-bold ">
+                <h3 className="text-blue-700  text-[45px] font-bold ">
                   प्रदेश समाचार
-                </h3>
-                //{" "}
+                </h3>{" "}
                 <NavLinkRow
                   links={PradeshLinks}
                   linkClassName="text-lg bg-gray-300 rounded-full px-3 py-2 text-blue-700 hover:text-white font-bold text-center "
                   containerClassName="px-10 space-x-6"
                 />
-                <Link href="" className="absolute right-160">
-                  <ChevronRight
-                    width={24}
-                    height={26}
-                    className="rounded-full bg-gray-200 text-black mx-auto hover:bg-gray-300 "
-                  />
+                <Link href="" className="absolute right-160 rounded-full bg-gray-200 text-gray-700 mx-auto hover:bg-gray-300 px-2 py-2 text-sm">
+                  सबै हेर्नुहोस्
+                    
+                  
                 </Link>
               </div>
               <div className="flex gap-10 ">
@@ -335,16 +371,192 @@ export default function Home() {
                   </div>
                 </div>
                 <div className="-mt-10">
-                  <NewsTradingList />
+                  <NewsTradingList items={TradingLink} />
                 </div>
               </div>
             </section>
             <div className="border mt-10 w-full border-gray-400"></div>
-            <AdBanner ad={mitsubishi}/>
+            <AdBanner ad={mitsubishi} />
             <section className="relative left-1/2 mt-10 w-screen -translate-x-1/2">
               <div>
-                <CardSlider cards={slidernews}/>
+                <CardSlider cards={slidernews} title="फिचर" />
               </div>
+            </section>
+            <section>
+              <div>
+                <CardNews cards={CoverStory} title="कभर स्टोरी" columns={4} />
+              </div>
+              <AdBanner ad={shivamcement} />
+            </section>
+            <section>
+              <div className="flex max-w-full mt-10">
+                <h3 className="text-blue-700  text-[45px] font-bold ">
+                  सप्ताहान्त
+                </h3>
+                <Link href="" className=" absolute right-120 rounded-full bg-gray-200 text-gray-700 mx-auto hover:bg-gray-300 px-2 py-2 text-sm">
+                  सबै हेर्नुहोस्
+                    
+                  
+                </Link>
+              </div>
+              <div className="flex gap-10 ">
+                <div className="">
+                  <Samachar sam={sapta} bgColor="bg-blue-500" />
+                </div>
+
+                <div className="mt-10"></div>
+
+                <div className="-mt-10">
+                  <AdSidebar ads={secondaryAD} />
+                </div>
+              </div>
+              <div>
+                <CardNews cards={saptastory} columns={4} />
+              </div>
+            </section>
+            <section className="mt-10">
+              <h3 className="text-blue-700  text-[45px] font-bold ">
+                सूचना-प्रविधि
+              </h3>
+              <div className="mt-10">
+                <HoverCardSlider cards={suchanaPravidhi} />
+              </div>
+            </section>
+            <section>
+              <div className="flex mt-10">
+                <h3 className="text-blue-700  text-[45px] font-bold ">
+                  स्वास्थ्य
+                </h3>
+                <NavLinkRow links={swasthaLinks} />
+              </div>
+              <div className="flex space-x-10 mt-4">
+                <div>
+                  <div>
+                    <Samachar sam={swastha} />
+                  </div>
+                  <div className="flex gap-4">
+                    <h3 className="text-[#2260BF] p-4 bg-blue-100 w-fit h-fit text-md">
+                      ट्रेन्डिङ डाक्टर
+                    </h3>
+                    <ImgNavRow links={TradingDoctor} />
+                  </div>
+                </div>
+                <div>
+                  <NewsGrid items={swasthaNews} columns={1} />
+                </div>
+              </div>
+            </section>
+            <section>
+              <div className="flex mt-10">
+                <h3 className="text-blue-700  text-[45px] font-bold ">
+                  अन्तर्वार्ता
+                </h3>
+              </div>
+              <div className="flex space-x-10 mt-4">
+                <div>
+                  <div>
+                    <Samachar sam={swastha} bgColor="bg-blue-500" />
+                    फिचर
+                  </div>
+                  <div className="flex gap-4"></div>
+                </div>
+                <div>
+                  <NewsGrid items={swasthaNews} columns={1} />
+                </div>
+              </div>
+            </section>
+            <section className="mt-10">
+              <h3 className="text-blue-700  text-[45px] font-bold mb-10">
+                खेलकुद
+              </h3>
+              <HoverCardSlider cards={khelkud} />
+            </section>
+            <AdBanner ad={worldlink} />
+            <section className="mt-20">
+              <div className="flex max-w-full">
+                <h3 className="text-blue-700  text-[45px] font-bold ">बिजनेस</h3>
+                <NavLinkRow links={categoryLinks} />
+                <Link href="" className="absolute right-120 rounded-full bg-gray-200 text-gray-700 mx-auto hover:bg-gray-300 px-2 py-2 text-sm">
+                  सबै हेर्नुहोस्
+                   
+                  
+                </Link>
+              </div>
+              <div className="flex gap-10 ">
+                <div className="mt-4 max-w-[900px]">
+                  <CardNews cards={SahityaCards} columns={4} />
+                </div>
+                <div className="-mt-10">
+                  <NewsLinkList items={NewsLink} />
+                </div>
+              </div>
+            </section>
+            <section className="relative left-1/2 mt-10 w-screen -translate-x-1/2">
+              <div>
+                <CardSlider cards={sliderstory} title="इन्टर्‍याक्टिभ स्टोरी" />
+              </div>
+            </section>
+            <section className="mt-20">
+              <div className="flex max-w-full">
+                <h3 className="text-blue-700  text-[45px] font-bold ">
+                  अन्तर्राष्ट्रिय
+                </h3>
+
+                <Link href="" className="absolute right-120 rounded-full bg-gray-200 text-black mx-auto hover:bg-gray-300">
+                  सबै हेर्नुहोस्
+                    
+                  
+                </Link>
+              </div>
+              <div className="flex gap-10 ">
+                <div>
+                  <div className="mt-2">
+                    <Samachar sam={antarastiya} />
+                  </div>
+                  <div className="mt-10">
+                    <NewsGrid items={antarastryaNews} />
+                  </div>
+                </div>
+                <div className="-mt-10">
+                  <NewsLinkList items={NewsLink} />
+                </div>
+              </div>
+            </section>
+            <section className="mt-10">
+              <h3 className="text-[45px] text-blue-500 font-bold">
+                विचित्र संसार
+              </h3>
+              <div className="flex gap-4 mt-4">
+                <div className="relative w-full max-w-lg shrink-0 overflow-hidden">
+                  <HoveredCard cards={bichitraSansar} size="large" />
+                </div>
+                <div>
+                  <NewsList items={homepageNews} button="" />
+                </div>
+                <div>
+                  <RankedNewsList
+                    title="धेरै कमेन्ट गरिएका"
+                    items={mostCommentedNews}
+                  />
+                </div>
+              </div>
+            </section>
+            <section>
+              <h3 className="text-[45px] font-bold text-blue-500 pb-5 mt-10">
+                पौरखी प्रवासी
+              </h3>
+              <HoverCardSlider cards={suchanaPravidhi} />
+            </section>
+            <section className="relative left-1/2 mt-10 w-screen -translate-x-1/2">
+              <div>
+                <CardSlider cards={slidernews} title="फिचर" />
+              </div>
+            </section>
+            <section className="mt-10">
+              <h3 className="pb-5 text-blue-500 text-[45px] font-bold">
+                छुटाउनुभयो कि ?
+              </h3>
+              <HoverCardGrid cards={unmissed} columns={4} size="compact" />
             </section>
           </div>
         </div>

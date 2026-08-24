@@ -31,3 +31,20 @@ export interface NewsItem {
     timeAgo?:string;
     href:string;
 }
+
+export interface StorySlide {
+  id: string;
+  image: string;
+  caption: string;
+  source: string;
+  timeAgo: string;
+}
+
+export interface StoryCollection {
+  id: string;
+  title: string;      
+  coverImage: string;  
+  storyCount: number;   
+  slides: StorySlide[];
+}
+

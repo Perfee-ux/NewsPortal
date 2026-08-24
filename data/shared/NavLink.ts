@@ -21,3 +21,14 @@ export const PradeshLinks: NavLink[] = [
   { id: "f", label: "६", href: "/category/corporate" },
   { id: "g", label: "७", href: "/category/corporate" },
 ];
+export const swasthaLinks: NavLink[] = [
+  { id: "aljaimer", label: "अल्जाइमर", href: "/category/economy" },
+  { id: "ayurved", label: "आयुर्वेद", href: "/category/tourism" },
+  { id: "endo", label: "इन्डोक्राइन (हर्मोन रोग)", href: "/category/employment" },
+  { id: "hiv", label: "एचआईभी", href: "/category/bank-finance" },
+  { id: "netra", label: "नेत्ररोग", href: "/category/auto" },
+  { id: "satri", label: "प्रसूति तथा स्त्रीरोग", href: "/category/corporate" },
+  { id: "bal", label: "बालरोग", href: "/category/corporate" },
+  { id: "mansik", label: "मानसिक स्वास्थ्य (डिप्रेसन, एन्जाइटी)", href: "/category/corporate" },
+  { id: "mutra", label: "मिर्गौला तथा मुत्र रोग", href: "/category/corporate" },
+];
