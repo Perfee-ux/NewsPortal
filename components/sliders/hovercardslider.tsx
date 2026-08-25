@@ -26,21 +26,20 @@ export default function HoverCardSlider({
     const isLarge = size === "large";
 
     return (
-        <section className="relative">
+       <section className="relative px-8 sm:px-12">
             {title && <h2 className="mb-6 text-3xl font-bold text-blue-700">{title}</h2>}
             <button
                 type="button"
                 aria-label="Previous cards"
                 onClick={scrollPrev}
-                className="absolute -left-15 top-1/2 z-10 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full bg-white text-gray-900 shadow-lg"
-            >
+                className="absolute left-0 sm:left-1 top-1/2 z-10 flex h-8 w-8 sm:h-10 sm:w-10 -translate-y-1/2 items-center justify-center rounded-full bg-blue-300 text-gray-900 shadow-lg hover:bg-gray-300"            >
                 <ChevronLeft size={20} />
             </button>
             <button
                 type="button"
                 aria-label="Next cards"
                 onClick={scrollNext}
-                className="absolute -right-15 top-1/2 z-10 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full bg-white text-gray-900 shadow-lg"
+                className="absolute right-0 sm:right-1 top-1/2 z-10 flex h-8 w-8 sm:h-10 sm:w-10 -translate-y-1/2 items-center justify-center rounded-full text-gray-900 shadow-lg hover:bg-gray-300 bg-blue-300"
             >
                 <ChevronRight size={20} />
             </button>

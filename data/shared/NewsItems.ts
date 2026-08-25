@@ -5,28 +5,28 @@ export const homepageNews: NewsItem[] = [
     id: "1",
     title: "उद्धारको पर्खाइमा पोल्यान्डमा गम्भीर घाइते भएका अमित चौधरी",
     image: "https://www.onlinekhabar.com/wp-content/uploads/2026/08/barsaman-pun.jpg",
-    timeAgo: "३० मिनेट अगाडि",
+    date: "1 दिन  अगाडि",
     href: "/news/1",
   },
     {
     id: "2",
     title: "उद्धारको पर्खाइमा पोल्यान्डमा गम्भीर घाइते भएका अमित चौधरी",
     image: "https://www.onlinekhabar.com/wp-content/uploads/2026/08/Guheshwori-Gokarna-Khanda-ma-Dhal-1024x500.jpg",
-    timeAgo: "३० मिनेट अगाडि",
+    date: "३ दिन  अगाडि",
     href: "/news/1",
   },
     {
     id: "3",
     title: "उद्धारको पर्खाइमा पोल्यान्डमा गम्भीर घाइते भएका अमित चौधरी",
     image: "https://www.onlinekhabar.com/wp-content/uploads/2026/08/Rabi-lamichhane-5.jpg",
-    timeAgo: "३० मिनेट अगाडि",
+    date: "३ दिन  अगाडि",
     href: "/news/1",
   },
     {
     id: "4",
     title: "उद्धारको पर्खाइमा पोल्यान्डमा गम्भीर घाइते भएका अमित चौधरी",
     image: "https://www.onlinekhabar.com/wp-content/uploads/2026/08/Amit-chaudhary.jpg",
-    timeAgo: "३० मिनेट अगाडि",
+    date: "३ दिन  अगाडि",
     href: "/news/1",
   },
 ];
@@ -105,42 +105,7 @@ export const politicsnews: NewsItem[] = [
     image: "https://www.onlinekhabar.com/wp-content/uploads/2026/08/Amit-chaudhary.jpg",
     href: "/news/1",
   },
-        {
-    id: "13",
-    title: "उद्धारको पर्खाइमा पोल्यान्डमा गम्भीर घाइते भएका अमित चौधरी",
-    image: "https://www.onlinekhabar.com/wp-content/uploads/2026/08/Amit-chaudhary.jpg",
-    href: "/news/1",
-  },
-          {
-    id: "14",
-    title: "उद्धारको पर्खाइमा पोल्यान्डमा गम्भीर घाइते भएका अमित चौधरी",
-    image: "https://www.onlinekhabar.com/wp-content/uploads/2026/08/Amit-chaudhary.jpg",
-    href: "/news/1",
-  },
-          {
-    id: "15",
-    title: "उद्धारको पर्खाइमा पोल्यान्डमा गम्भीर घाइते भएका अमित चौधरी",
-    image: "https://www.onlinekhabar.com/wp-content/uploads/2026/08/Amit-chaudhary.jpg",
-    href: "/news/1",
-  },
-          {
-    id: "16",
-    title: "उद्धारको पर्खाइमा पोल्यान्डमा गम्भीर घाइते भएका अमित चौधरी",
-    image: "https://www.onlinekhabar.com/wp-content/uploads/2026/08/Amit-chaudhary.jpg",
-    href: "/news/1",
-  },
-          {
-    id: "17",
-    title: "उद्धारको पर्खाइमा पोल्यान्डमा गम्भीर घाइते भएका अमित चौधरी",
-    image: "https://www.onlinekhabar.com/wp-content/uploads/2026/08/Amit-chaudhary.jpg",
-    href: "/news/1",
-  },
-          {
-    id: "18",
-    title: "उद्धारको पर्खाइमा पोल्यान्डमा गम्भीर घाइते भएका अमित चौधरी",
-    image: "https://www.onlinekhabar.com/wp-content/uploads/2026/08/Amit-chaudhary.jpg",
-    href: "/news/1",
-  },
+
 ];
 
 export const businessnews: NewsItem[] = [

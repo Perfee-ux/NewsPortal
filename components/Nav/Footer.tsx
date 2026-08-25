@@ -91,35 +91,35 @@ export default function FooterLinkColumn() {
         ))}
       </div>
 
-<div className="mt-12 border-t border-gray-300 pt-8 flex flex-row items-center justify-center gap-6 mx-auto bg-blue-100">
-        <div className="flex gap-10 text-gray-600">
+ <div className="mt-12 border-t border-gray-300 pt-8 flex flex-col sm:flex-row items-center justify-center gap-6 mx-auto bg-blue-100 px-4">
+        <div className="flex flex-col sm:flex-row flex-wrap items-center justify-center gap-6 sm:gap-10 text-gray-600 text-center sm:text-left">
           <img
             src="https://www.onlinekhabar.com/wp-content/themes/onlinekhabar-2021/img/main-logo-new.svg"
-            className="w-64"
+            className="w-32 sm:w-48 lg:w-64"
           />
-          <div className="w-px h-16 bg-gray-700"></div>
+          <div className="hidden sm:block w-px h-16 bg-gray-700"></div>
           <div className="space-y-2">
             <p className="text-[12px]">तथा प्रबन्ध निर्देशक:</p>
             <p>धर्मराज भुसाल</p>
           </div>
-          <div className="w-px h-16 bg-gray-700"></div>
+          <div className="hidden sm:block w-px h-16 bg-gray-700"></div>
           <div className="space-y-2">
             <p className="text-[12px]">तथा प्रबन्ध निर्देशक:</p>
             <p>धर्मराज भुसाल</p>
           </div>
-          <div className="w-px h-16 bg-gray-700"></div>
+          <div className="hidden sm:block w-px h-16 bg-gray-700"></div>
 
           <div className="space-y-2">
             <p className="text-[12px]">तथा प्रबन्ध निर्देशक:</p>
             <p>धर्मराज भुसाल</p>
           </div>
-          <div className="w-px h-16 bg-gray-700"></div>
+          <div className="hidden sm:block w-px h-16 bg-gray-700"></div>
 
           <div className="space-y-2">
             <p className="text-[12px]">तथा प्रबन्ध निर्देशक:</p>
             <p>धर्मराज भुसाल</p>
           </div>
-          <div className="w-px h-16 bg-gray-700"></div>
+          <div className="hidden sm:block w-px h-16 bg-gray-700"></div>
         </div>
       </div>
     </footer>

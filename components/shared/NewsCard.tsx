@@ -10,10 +10,10 @@ export default function NewsCard({
   size?: "default" | "small";
 }) {
   return (
-    <Link href={item.href} className="flex gap-8 hover:opacity-80">
+        <Link href={item.href} className="flex gap-3 sm:gap-8 hover:opacity-80">
       <div
         className={`relative shrink-0 overflow-hidden rounded ${
-          size === "small" ? "h-20 w-24" : "h-28 w-34"
+          size === "small" ? "h-16 w-20 sm:h-20 sm:w-24" : "h-20 w-24 sm:h-28 sm:w-34"
         }`}
       >
         <Image
@@ -24,12 +24,12 @@ export default function NewsCard({
         />
       </div>
       <div className="flex flex-col justify-between">
-        <h3 className="text-base font-semibold leading-snug text-gray-900">
+                <h3 className="text-sm sm:text-base font-semibold leading-snug text-gray-900">
           {item.title}
         </h3>
-        {item.timeAgo && (
-          <span className="mt-2 flex items-center gap-1 text-xs text-gray-500">
-            🕐 {item.timeAgo}
+        {item.date && (
+          <span className="mt-1 sm:mt-2 flex items-center gap-1 text-xs sm:text-sm text-gray-500">
+            🗓️ {item.date}
           </span>
         )}
       </div>

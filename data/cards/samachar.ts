@@ -17,7 +17,7 @@ export const samachar1: SamacharID[] = [
 ];
 
 
-export const business: SamacharID[] = [
+export const businessess: SamacharID[] = [
   {
     image:
       "https://www.onlinekhabar.com/wp-content/uploads/2025/06/gold-image-generatad-by-ai-768x427.jpg",

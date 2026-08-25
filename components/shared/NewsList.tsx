@@ -2,6 +2,7 @@ import { NewsItem } from "@/data/types";
 import Link from "next/link";
 import NewsCard from "./NewsCard";
 
+
 interface NewsListProps {
   items: NewsItem[];
   button?: string;

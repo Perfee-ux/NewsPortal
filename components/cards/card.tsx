@@ -17,21 +17,21 @@ export default function Card({ card, theme = "light", title }: CardProps) {
         isDark ? "" : "border border-gray-200 bg-white"
       }`}
     >
-      <div className="relative h-52 overflow-hidden rounded-lg">
+      <div className="relative h-36 sm:h-44 lg:h-52 overflow-hidden rounded-lg">
         <img
           src={card.image}
           alt={card.heading}
           className="relative h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
         />
         {title && (
-          <span className="absolute left-4 top-4 rounded bg-blue-600 px-3 py-2 text-lg font-medium text-white">
+          <span className="absolute left-2 top-2 sm:left-4 sm:top-4 rounded bg-blue-600 px-2 py-1 sm:px-3 sm:py-2 text-sm sm:text-lg font-medium text-white">
             {title}
           </span>
         )}
       </div>
 
       <h2
-        className={`p-4 text-lg font-medium leading-snug ${
+        className={`p-3 sm:p-4 text-sm sm:text-lg font-medium leading-snug ${
           isDark
             ? "text-white group-hover:text-gray-300"
             : "text-gray-900 group-hover:text-[#2260BF]"

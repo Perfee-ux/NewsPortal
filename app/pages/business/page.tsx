@@ -6,7 +6,7 @@ import Samachar from "@/components/shared/samachar/samachargrid";
 import { deepal } from "@/data/cards/samachar";
 import NewsGrid from "@/components/shared/NewsGris";
 import { swasthaNews } from "@/data/shared/NewsItems";
-import NewsLinkList from "@/components/shared/NewsItems/corporatenews";
+import NewsLinkList from "@/components/shared/NewsItems/NewsLinkList";
 import { BusinessNewsLink } from "@/data/shared/NewsLinkItem";
 import CardSlider from "@/components/sliders/cardslider";
 import { auto } from "@/data/cards/samachar";

@@ -28,7 +28,7 @@ export interface NewsItem {
     id:string;
     title:string;
     image:string;
-    timeAgo?:string;
+    date?:string;
     href:string;
 }
 
