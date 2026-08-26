@@ -5,6 +5,14 @@ export interface BannerAd {
     href:string;
     alt:string;
 }
+export const AsianPaintAd: BannerAd= {
+    id:"asian paint",
+    image:"https://www.onlinekhabar.com/wp-content/uploads/2026/05/IMG_3683.gif",
+    mobileImage:"https://www.onlinekhabar.com/wp-content/uploads/2026/05/IMG_3681.gif",
+    href:"https://bit.ly/3xltPV0",
+    alt: "NIMB Paywear - stick, tap & pay"
+    
+};
 
 export const nimbBannerAd: BannerAd = {
     id:"ni'mb-payer",

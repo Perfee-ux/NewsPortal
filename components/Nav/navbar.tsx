@@ -8,6 +8,8 @@ import { navItems } from "@/data/nav/Navdata";
 import { pageConfig, defaultConfig } from "@/data/nav/PageConfig";
 import MegaMenu from "./MegaMenu";
 import { CalendarDays, Menu, X } from "lucide-react";
+import AdBanner from "../shared/AdBanner";
+import { AsianPaintAd } from "@/data/shared/adsbanner";
 
 export default function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -18,37 +20,43 @@ export default function Navbar() {
 
   const hoveredItem = navItems.find((item) => item.label === hoveredLabel);
 
-  useEffect(() => {
-    document.body.style.overflow = mobileMenuOpen ? "hidden" : "";
-    return () => {
-      document.body.style.overflow = "";
-    };
-  }, [mobileMenuOpen]);
-
   return (
     <div onMouseLeave={() => setHoveredLabel(null)}>
       {isHome ? (
-        <div className="mx-auto flex flex-col sm:flex-row h-auto sm:h-[168px] w-[calc(100%-32px)] max-w-full px-4 sm:px-30 items-center sm:justify-between gap-4 sm:gap-8 bg-white py-4 sm:py-0">
-          <div className="shrink-0 ">
-            <Image
-              src="https://www.onlinekhabar.com/wp-content/themes/onlinekhabar-2021/img/main-logo-new.svg"
-              alt="Logo"
-              width={280}
-              height={62}
-              className="h-auto w-[180px] sm:w-[280px]"
-            />
-            <p className="mt-1 text-[15px] text-gray-500 text-center">
-              ४ भदौ २०८३, बिहीबार
-            </p>
+        <>
+          <div className="block sm:hidden w-full px-4 pt-2">
+            <div className="flex h-auto min-w-0 w-full items-center justify-center overflow-hidden">
+              <AdBanner ad={AsianPaintAd} />
+            </div>
           </div>
-          <div className="flex h-[60px] sm:h-[90px] min-w-0 w-full sm:max-w-[700px] flex-1 items-center justify-center overflow-hidden ">
-            <img
-              src="https://www.onlinekhabar.com/wp-content/uploads/2026/05/IMG_3683.gif"
-              alt="Ad Banner "
-              className="h-full w-full object-cover"
-            />
+
+          <div className=" w-full  shadow-sm sm:shadow-none sm:bg-transparent">
+            <div className="mx-auto flex flex-col sm:flex-row h-auto sm:h-[168px] w-[calc(100%-32px)] max-w-full px-0 sm:px-30 items-center sm:justify-between gap-4 sm:gap-8 py-3 sm:py-0 relative">
+              <div className="shrink-0 flex flex-col items-center justify-center relative w-full sm:w-auto">
+                <Image
+                  src="https://www.onlinekhabar.com/wp-content/themes/onlinekhabar-2021/img/main-logo-new.svg"
+                  alt="Logo"
+                  width={280}
+                  height={62}
+                  className="h-auto w-[180px] sm:w-[280px]"
+                />
+                <p className="mt-1 text-[15px] text-gray-500 text-center">
+                  ४ भदौ २०८३, बिहीबार
+                </p>
+                <button
+                  onClick={() => setMobileMenuOpen(true)}
+                  className="absolute right-2 top-2 rounded-md p-2 shadow-md sm:hidden bg-white z-50"
+                  aria-label="Open menu"
+                >
+                  <Menu size={24} className="text-gray-800" />
+                </button>
+              </div>
+              <div className="hidden sm:flex h-auto sm:h-auto min-w-0 w-full sm:max-w-[700px] flex-1 items-center justify-center overflow-hidden">
+                <AdBanner ad={AsianPaintAd} />
+              </div>
+            </div>
           </div>
-        </div>
+        </>
       ) : (
         <div
           className={`${config.bgColor} bg-cover bg-center py-6 px-6`}
@@ -61,18 +69,6 @@ export default function Navbar() {
           <p className="text-white text-sm mt-1">४ भदौ २०८३, बिहीबार</p>
         </div>
       )}
-
-      <button
-        onClick={() => setMobileMenuOpen((prev) => !prev)}
-        className="lg:hidden fixed top-4 right-4 z-[60] rounded-md bg-white p-2 shadow-md"
-        aria-label={mobileMenuOpen ? "Close menu" : "Open menu"}
-      >
-        {mobileMenuOpen ? (
-          <X size={24} className="text-gray-800" />
-        ) : (
-          <Menu size={24} className="text-gray-800" />
-        )}
-      </button>
 
       <nav className={`${config.bgColor} relative shadow-md hidden lg:block`}>
         <div className="mx-auto flex w-[calc(100%-32px)] max-w-[1540px] items-center justify-between gap-4 overflow-x-auto px-4 sm:px-30">
@@ -98,12 +94,12 @@ export default function Navbar() {
             ))}
           </ul>
           <div className="hidden shrink-0 items-center gap-12 lg:flex">
-            <button className="flex h-9 items-center gap-1 rounded-md bg-[#ff686b] px-2.5 text-[15px] font-semibold text-white">
+            <button className="flex h-9 items-center gap-1 rounded-md bg-[#ff686b] px-3 text-[15px] font-semibold text-white">
               <CalendarDays size={17} /> पात्रो
             </button>
             <button
               onClick={() => setMobileMenuOpen((prev) => !prev)}
-              className="  rounded-md p-2 shadow-md fixed"
+              className="  rounded-md p-2 shadow-md "
               aria-label={mobileMenuOpen ? "Close menu" : "Open menu"}
             >
               {mobileMenuOpen ? (
@@ -122,6 +118,13 @@ export default function Navbar() {
 
       {mobileMenuOpen && (
         <div className="fixed inset-0 z-50 bg-white lg:hidden overflow-y-auto">
+          <button
+            onClick={() => setMobileMenuOpen(false)}
+            className="fixed right-4 top-4 rounded-md p-2 shadow-md bg-white z-[60]"
+            aria-label="Close menu"
+          >
+            <X size={24} className="text-gray-800" />
+          </button>
           <ul className="flex flex-col px-6 pt-20 pb-6">
             {navItems.map((item) => (
               <li key={item.label} className="border-b border-gray-100 py-4">

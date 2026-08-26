@@ -290,7 +290,14 @@ export const CoverStory: NewsCards[] = [
     heading: "जो शान्ति सम्झौताको २० वर्षपछि पनि युद्धमै छन्",
     href: "",
     title:"कभर स्टोरी"
-  },    
+  },   
+  {
+    id: "slac",
+    image: "https://www.onlinekhabar.com/wp-content/uploads/2026/07/sunsari-goli-prakaran1248-1024x500.jpg",
+    heading: "सुनसरी घटना : कति भयो भौतिक क्षति ?",
+    href: "",
+    title: "कभर स्टोरी"
+  }, 
 ];
 
 export const saptastory: NewsCards[] = [

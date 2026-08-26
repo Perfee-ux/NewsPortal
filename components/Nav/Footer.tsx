@@ -67,8 +67,8 @@ export const footerColumns = [
 
 export default function FooterLinkColumn() {
   return (
-    <footer className="px-20 py-12 bg-blue-50 mt-20">
-      <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-6">
+    <footer className="px-20 w-full py-12 bg-blue-50 mt-20 mx-10">
+      <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-6 lg:mx-auto ">
         {footerColumns.map((column) => (
           <div key={column.title}>
             <h3 className="mb-5 text-lg font-bold text-[#2260BF]">
@@ -91,7 +91,7 @@ export default function FooterLinkColumn() {
         ))}
       </div>
 
- <div className="mt-12 border-t border-gray-300 pt-8 flex flex-col sm:flex-row items-center justify-center gap-6 mx-auto bg-blue-100 px-4">
+      <div className="mt-12 border-t border-gray-300 pt-8 flex flex-col sm:flex-row items-center justify-center gap-6 mx-auto bg-blue-100 px-4 lg:py-6">
         <div className="flex flex-col sm:flex-row flex-wrap items-center justify-center gap-6 sm:gap-10 text-gray-600 text-center sm:text-left">
           <img
             src="https://www.onlinekhabar.com/wp-content/themes/onlinekhabar-2021/img/main-logo-new.svg"

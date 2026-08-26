@@ -1,4 +1,4 @@
-import CardNews from "@/components/cards/newscard";
+import CardNews from "@/components/cards/cardnews";
 import Navbar from "@/components/Nav/navbar";
 import FooterLinkColumn from "@/components/Nav/Footer";
 import SubNav from "@/components/Nav/SubNavbar";

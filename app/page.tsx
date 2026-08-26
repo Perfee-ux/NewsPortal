@@ -21,7 +21,7 @@ import Samachar from "@/components/shared/samachar/samachargrid";
 import NewsLinkList from "@/components/shared/NewsItems/NewsLinkList";
 import NewsTradingList from "@/components/shared/NewsItems/Trading";
 import NavLinkRow from "@/components/Nav/NavLinkRow";
-import CardNews from "@/components/cards/newscard";
+import CardNews from "@/components/cards/cardnews";
 import HoverCardSlider from "@/components/sliders/hovercardslider";
 import HoveredCard, { HoverCardItem } from "@/components/cards/hovercard";
 import ImgNavRow from "@/components/Nav/ImageNavRow";
@@ -253,7 +253,7 @@ export default function Home() {
             </div>
             <AdBanner ad={tataev} />
 
-            <section className="flex flex-col lg:flex-row gap-4 mt-10 lg:mt-20">
+            <section className="flex flex-col lg:flex-row gap-12 mt-10 lg:mt-20">
               <div className="relative w-full max-w-lg shrink-0 overflow-hidden">
                 <HoveredCard cards={LandingTop} size="large" />
               </div>
@@ -492,7 +492,7 @@ export default function Home() {
                   सबै हेर्नुहोस्
                 </Link>
               </div>
-              <div className="flex flex-col lg:flex-row gap-6 lg:gap-10">
+              <div className="flex flex-col lg:flex-row gap-6 lg:gap-8">
                 <div>
                   <div className="mt-2">
                     <Samachar sam={antarastiya} />
@@ -501,7 +501,7 @@ export default function Home() {
                     <NewsGrid items={antarastryaNews} />
                   </div>
                 </div>
-                <div className="mt-4 lg:-mt-10">
+                <div className="mt-4 ">
                   <NewsLinkList items={NewsLink} />
                 </div>
               </div>
